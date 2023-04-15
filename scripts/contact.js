@@ -4,3 +4,16 @@
 
 //hint: you can change the style of an element by modifying the value of that element's
 //.style.fontSize, or by updating its .classList.
+
+function submit() {
+  contactPage = document.getElementById("contact-page");
+  thankYouMessage = document.createElement("p");
+  thankYouMessage.textContent = "Thank you for your message";
+  thankYouMessage.style.fontSize = "24px";
+  contactPage.innerHTML = "";
+  contactPage.appendChild(thankYouMessage);
+}
+
+submitButton = document.getElementById("submit-button");
+
+submitButton.addEventListener("click", submit);
