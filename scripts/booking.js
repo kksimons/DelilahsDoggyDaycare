@@ -10,6 +10,12 @@ let halfDaySelected = false;
 let fullButton = document.getElementById("full");
 let halfButton = document.getElementById("half");
 
+/********* colour change days of week *********/
+// when the day buttons are clicked, we will apply the "clicked" class to that element,
+//and update any other relevant variables. Then, we can recalculate the total cost.
+// added challenge: don't update the dayCounter if the same day is clicked more than once.
+//hint: .classList.contains() might be helpful here!
+
 let dayButtons = document.querySelectorAll(".day-selector li");
 dayButtons.forEach(function (dayButton) {
   let day = dayButton.getAttribute("id");
@@ -17,12 +23,6 @@ dayButtons.forEach(function (dayButton) {
     toggleDaySelection(day);
   });
 });
-
-/********* colour change days of week *********/
-// when the day buttons are clicked, we will apply the "clicked" class to that element,
-//and update any other relevant variables. Then, we can recalculate the total cost.
-// added challenge: don't update the dayCounter if the same day is clicked more than once.
-//hint: .classList.contains() might be helpful here!
 
 function toggleDaySelection(day) {
   let dayElement = document.getElementById(day);
